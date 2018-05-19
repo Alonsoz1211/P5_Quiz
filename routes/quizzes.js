@@ -1,8 +1,8 @@
 var express = require ('express');
 var router = express.Router();
 
-const Sequelize = require('sequelize');
 const {models} = require('../models/index');
+
 
 router.get('/', function(req,res,next){
     models.quiz.findAll()

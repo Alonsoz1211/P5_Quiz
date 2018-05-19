@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>QUIZZES</title>
-</head>
+    <meta charset="utf-8">
+    <title>Quizzes</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' /></head>
 <body>
-<p><%= quiz %></p>
+<h1><b> Quizzes list: </b></h1>
+<ul>
 
-<a href="/"><b>Inicio.</b></a>
+    <% for ( let i in quizzes) { %>
+    <% const quiz = quizzes[i]; %>
+
+    <li>
+        Quiz number <%= i %> : <%= quiz.question %> : <%= quiz.answer %>
+    </li>
+    <% } %>
+</ul>
+
+<a href="/">Inicio</a>
+<a href="/credits">Credits</a>
+<a href="/quizzes">Quizzes</a>
 </body>
 </html>
