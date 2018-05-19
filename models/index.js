@@ -1,9 +1,7 @@
 
 const Sequelize = require('sequelize');
-const options = {logging:false};
-const sequelize = new Sequelize("sqlite:quizzes.sqlite",options);
+const sequelize = new Sequelize("sqlite:quizzes.sqlite",{logging:false});
 
-//sequelize.import(path.join(__dirname,'quiz'));
 
 sequelize.define('quiz',{
     question:{
